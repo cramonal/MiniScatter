@@ -84,6 +84,8 @@ private:
     G4Material*        KaptonMaterial         = NULL;
     G4Material*        StainlessSteelMaterial = NULL;
     G4Material*        WaterMaterial          = NULL;
+    G4Material*        ICsMaterial            = NULL;
+    G4Material*        ConcretMaterial        = NULL;
 
     G4Material*        SapphireMaterial = NULL;
 

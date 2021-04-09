@@ -240,7 +240,8 @@ void DetectorConstruction::DefineMaterials() {
     KaptonMaterial         = man->FindOrBuildMaterial("G4_KAPTON");
     StainlessSteelMaterial = man->FindOrBuildMaterial("G4_STAINLESS-STEEL");
     WaterMaterial          = man->FindOrBuildMaterial("G4_WATER");
-
+    ICsMaterial          = man->FindOrBuildMaterial("G4_CESIUM_IODIDE");
+    ConcretMaterial      = man->FindOrBuildMaterial("G4_CONCRETE");
     vacuumMaterial = man->FindOrBuildMaterial("G4_Galactic");
 
     G4Element* elAl = new G4Element("Aluminium", "Al", 13.0, 26.9815385*g/mole);
