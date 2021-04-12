@@ -171,16 +171,19 @@ def runScatter(simSetup, quiet=False,allOutput=False, logName=None, onlyCommand=
     for c in cmd:
         cmdline += c + " "
 
+    logFolder = "./log/"
+    if os.path.isdir('./log/')==False: 
+        os.mkdir("./log/")
     runFolder = os.path.dirname(os.path.abspath(__file__))
-
     if logName is None:
-        logName = os.path.join(runFolder,"MiniScatterLog_" + datetime.datetime.now().isoformat()+".txt")
+        print("creating log",logFolder )
+        logName = os.path.join(logFolder,"MiniScatterLog_" + datetime.datetime.now().isoformat()+".txt")
     logFile = open(logName, 'w')
 
     if not quiet:
         print ("Running command line: '" + cmdline[:-1] + "'")
         if not onlyCommand:
-            print ("RunFolder = '" + runFolder + "'")
+            print ("RunFolder = '" + logFolder + "'")
             print ("logName   = '" + logName   + "'")
 
     # runResults = subprocess.run(cmd, close_fds=True, stdout=subprocess.PIPE, cwd=runFolder)
